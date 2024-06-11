@@ -1,0 +1,31 @@
+//do in my sql server
+
+CREATE DATABASE UserInformation;
+
+
+CREATE TABLE UserInformation.UserAccount(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(255) NOT NULL UNIQUE,
+	password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE UserInformation.UserData(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255),
+	username VARCHAR(255) NOT NULL,
+	creator VARCHAR(255),
+	userIDs TEXT,
+	content TEXT, 
+	status TEXT,
+	year INT,
+	month INT,
+	day INT,
+	notificationYear INT, 
+	notificationMonth INT, 
+	notificationDay INT
+);
+
+// add libaray to java
+
+download mysql-connector-j-8.4.0.jar
+then into eclipes -> right click project -> Build Path -> Configure Build Path -> Libararies -> Classpath -> Add JARs -> select your download file
